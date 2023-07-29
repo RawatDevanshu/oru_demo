@@ -1,16 +1,30 @@
-# oru
+# oru_demo
 
-A new Flutter project.
+## How to Use 
 
-## Getting Started
+**Step 1:**
 
-This project is a starting point for a Flutter application.
+Download or clone this repo by using the link below:
 
-A few resources to get you started if this is your first Flutter project:
+```
+https://github.com/RawatDevanshu/oru_demo.git
+```
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+**Step 2:**
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Go to project root and execute the following command in console to get the required dependencies: 
+
+```
+flutter pub get 
+```
+
+**Step 3:**
+
+in terminal type `flutter run `to execute the project
+
+* Memory management:
+   * I utilized the flutter dev-tools to check for any memory leaks,and resolved some memory leak issues by properly disposing the scroll controllers and text editing controllers used in the program
+   * also where the grid and list widgets were required i used the `.builder` widgets as they are said to be more memory efficient than the normal ones
+   * other than that inside the grid/list views i set the `addAutomaticKeepAlives` and `addRepaintBoundaries` to `false`
+* Image Caching:
+    * for this i used the `cached_image_network` package which had the `CachedNetworkImage` widget
